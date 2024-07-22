@@ -13,7 +13,7 @@ import { NavigationsComponent } from './components/navigations/navigations.compo
     CommonModule,
     GlobalErrorComponent,
     NavigationsComponent,
-    RouterModule
+    RouterModule,
   ],
   templateUrl: './app.component.html',
 })

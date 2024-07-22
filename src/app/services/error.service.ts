@@ -8,7 +8,6 @@ export class ErrorService {
   error$ = new Subject<string>();
 
   handle(message: string) {
-    console.log('message: ', message);
     this.error$.next(message);
   }
 

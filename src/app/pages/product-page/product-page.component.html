@@ -1,11 +1,14 @@
 <h1 class="font-bold mb-2 text-center text-lg">{{ title | titlecase }}</h1>
 
-<input
-  type="text"
-  class="mb-2 border py-2 px-4 w-full"
-  placeholder="Search product..."
-  [(ngModel)]="term"
-/>
+<mat-form-field class="w-full !bg-white">
+  <mat-label>Search products</mat-label>
+  <input matInput type="text" [(ngModel)]="term" class="w-full">
+  @if (term) {
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="term=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  }
+</mat-form-field>
 
 <p *ngIf="loading" class="text-center text-lg">Loading...</p>
 
