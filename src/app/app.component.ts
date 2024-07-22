@@ -1,13 +1,22 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+
+import { GlobalErrorComponent } from './components/global-error/global-error.component';
+import { NavigationsComponent } from './components/navigations/navigations.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    GlobalErrorComponent,
+    NavigationsComponent,
+    RouterModule
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-course';
+  
 }
